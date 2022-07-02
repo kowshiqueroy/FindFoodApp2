@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">FindFoodApp</string>
+    <string name="t1">FindFoodApp</string>
+
 </resources>
