@@ -4,6 +4,10 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Spinner;
+import android.widget.TextView;
+
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -13,8 +17,29 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
-   
+
 
     public void onClickFindFood(View view) {
+
+        TextView result = (TextView) findViewById(R.id.t);
+
+        Spinner time = (Spinner) findViewById(R.id.s);
+
+        String foodType = String.valueOf(time.getSelectedItem());
+
+
+
+        List<String> foods = options.getFoods(foodType);
+        StringBuilder foodsFormatted = new StringBuilder();
+        for (String food : foods) {
+            foodsFormatted.append(food).append('\n');
+        }
+
+
+
+
+        result.setText(foodsFormatted);
+
+
     }
 }
