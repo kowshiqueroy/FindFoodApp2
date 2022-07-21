@@ -1,5 +1,14 @@
 <resources>
     <string name="app_name">FindFoodApp</string>
     <string name="t1">FindFoodApp</string>
+    <string name="search">Search</string>
+    <string name="brands">No food selected!</string>
+
+    <string-array name="sp">
+        <item>breakfast</item>
+        <item>lunch</item>
+        <item>dinner</item>
+
+    </string-array>
 
 </resources>
