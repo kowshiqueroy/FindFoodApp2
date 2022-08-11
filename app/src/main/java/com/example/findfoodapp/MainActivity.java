@@ -2,11 +2,13 @@ package com.example.findfoodapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Spinner;
 import android.widget.TextView;
 
+import java.lang.annotation.Target;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
@@ -39,6 +41,15 @@ public class MainActivity extends AppCompatActivity {
 
 
         result.setText(foodsFormatted);
+
+
+
+        Intent intent = new Intent(this, MainActivity2.class);
+
+        intent.putExtra("message", foodsFormatted.toString());
+
+
+        startActivity(intent);
 
 
     }
